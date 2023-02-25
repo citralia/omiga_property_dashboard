@@ -36,6 +36,9 @@ import {
     AgentProfile,
     EditProperty,
 } from "pages";
+import { baseURL, baseURL_User } from "constants/constants.js";
+
+console.log(baseURL_User)
 
 const axiosInstance = axios.create();
 axiosInstance.interceptors.request.use((request: AxiosRequestConfig) => {
@@ -58,7 +61,7 @@ function App() {
 
             if (profileObj) {
                 const response = await fetch(
-                    "https://omiga-property-dashboard.onrender.com/api/v1/users",
+                    baseURL_User,
                     {
                         method: "POST",
                         headers: { "Content-Type": "application/json" },
@@ -128,7 +131,7 @@ function App() {
             <GlobalStyles styles={{ html: { WebkitFontSmoothing: "auto" } }} />
             <RefineSnackbarProvider>
                 <Refine
-                    dataProvider={dataProvider("https://omiga-property-dashboard.onrender.com/api/v1")}
+                    dataProvider={dataProvider(baseURL)}
                     notificationProvider={notificationProvider}
                     ReadyPage={ReadyPage}
                     catchAll={<ErrorComponent />}

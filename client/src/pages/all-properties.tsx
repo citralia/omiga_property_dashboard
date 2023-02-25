@@ -86,7 +86,7 @@ const AllProperties = () => {
                 }}
               >
                 <MenuItem value=''>All</MenuItem>
-                {['Apartment', ' Villa', 'Farmhouse', 'Condos', 'Townhouse', 'Duplex', 'Studio', 'Chalet'].map((type) => (
+                {['House', 'Flat', 'Cottage', 'Glamping', 'Bnb', 'Hotel', 'Hostel', 'Room'].map((type) => (
                   <MenuItem key={type} value={type.toLowerCase()}>{type}</MenuItem>
                 ))}
               </Select>
@@ -115,6 +115,7 @@ const AllProperties = () => {
             title={property.title}
             price={property.price}
             location={property.location}
+            city={property.city}
             photo={property.photo}
           />
         )};

@@ -11,6 +11,7 @@ export interface FormValues {
     propertyType: string,
     location: string,
     price: number | undefined,
+    city: string,
 }
 
 export interface PropertyCardProps {
@@ -19,4 +20,5 @@ export interface PropertyCardProps {
   location: string,
   price: string,
   photo: string,
+  city: string,
 }

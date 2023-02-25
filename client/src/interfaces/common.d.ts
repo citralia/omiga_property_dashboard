@@ -22,6 +22,7 @@ export interface PropertyProps {
     title: string,
     description: string,
     location: string,
+    city: string,
     price: string,
     photo: string,
     creator: string

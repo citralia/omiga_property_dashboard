@@ -35,6 +35,13 @@ export const validateForm = (formValues: FormValues) => {
         }
         break;
 
+      case 'city':
+        if (!formValues.city) {
+          errors.message = 'City is required';
+          hasError = true;
+        }
+        break;
+
       case 'price':
         if (!formValues.price) {
           errors.message = 'Price is required';

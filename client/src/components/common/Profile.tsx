@@ -186,6 +186,7 @@ const Profile = ({ type, name, avatar, email, properties }: ProfileProps) => (
                             location={property.location}
                             price={property.price}
                             photo={property.photo}
+                            city={property.city}
                         />
                     ))}
                 </Box>

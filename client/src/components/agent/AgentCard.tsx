@@ -94,7 +94,10 @@ const AgentCard = ({
                 >
                     <InfoBar
                         icon={<EmailOutlined sx={{ color: "#808191" }} />}
-                        name={email}
+                        // hide email address behind hyperlink
+                        name={email.replace(/(.{3}).*(.{3})/, "$1...$2")}
+
+                        // name={email}
                     />
                     <InfoBar
                         icon={<Place sx={{ color: "#808191" }} />}
@@ -102,7 +105,7 @@ const AgentCard = ({
                     />
                     <InfoBar
                         icon={<Phone sx={{ color: "#808191" }} />}
-                        name="+502-3231-4141"
+                        name="Contact for details"
                     />
                     <InfoBar
                         icon={<LocationCity sx={{ color: "#808191" }} />}
